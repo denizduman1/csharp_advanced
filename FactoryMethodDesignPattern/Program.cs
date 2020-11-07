@@ -11,39 +11,64 @@ namespace FactoryMethodDesignPattern
         static void Main(string[] args)
         {
             //Factory Method Design
-            Business b1 = new Business();
-            b1.Save();
+            Factory factory = new Factory();
+            Oyun oyun_nesnesi = factory.FactoryMethod(Oyunlar.PS5);
+            oyun_nesnesi.display();
+            Console.ReadLine();
         }
     }
-    public class LoggerFactory:ILoggerFactory
-    {
-        public ILogger CreateLogger()
-        {
-            return new DdLogger();
-        }
-    }
-    public interface ILoggerFactory
-    {
 
-    }
-    public interface ILogger
+    class Factory
     {
-        void Log();
-    }
-    public class DdLogger : ILogger
-    {
-        public void Log()
+        private static Oyun _Object;
+        public Oyun FactoryMethod(Oyunlar oyunlar)
         {
-            Console.WriteLine("Logged with DD");
+            switch (oyunlar)
+            {
+                case Oyunlar.XBOX:
+                    _Object = new XBOX();
+                    break;
+                case Oyunlar.PC:
+                    _Object = new PC();
+                    break;
+                case Oyunlar.PS5:
+                    _Object = new PS5();
+                    break;
+                default:
+                    break;
+            }
+            return _Object;
         }
     }
-    public class Business
+
+    enum Oyunlar
     {
-        public void Save()
+       XBOX,PC,PS5
+    }
+    interface Oyun
+    {
+        void display();
+    }
+    class XBOX : Oyun
+    {
+        public void display()
         {
-            Console.WriteLine("Saved!");
-            ILogger logger = new LoggerFactory().CreateLogger();
-            logger.Log();
+            Console.WriteLine("Bu bir XBOX oyunudur.");
+        }
+    }
+    class PC : Oyun
+    {
+        public void display()
+        {
+            Console.WriteLine("Bu bir PC oyunudur.");
+        }
+    }
+
+    class PS5 : Oyun
+    {
+        public void display()
+        {
+            Console.WriteLine("Bu bir playstation 5 oyunudur.");
         }
     }
 }
