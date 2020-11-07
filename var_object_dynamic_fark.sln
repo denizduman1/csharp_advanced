@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarbageCollectionveYıkıc�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsHataYönetimi", "ExceptionsHataYönetimi\ExceptionsHataYönetimi.csproj", "{AB36077B-DFF9-446A-BDDE-9B2811B5B1C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonDesignPattern", "SingletonDesignPattern\SingletonDesignPattern.csproj", "{01CEE65F-6C25-40FD-A6D5-A412A853D2A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodDesignPattern", "FactoryMethodDesignPattern\FactoryMethodDesignPattern.csproj", "{626CFCCB-59A5-45B7-9DB4-437358E0F4E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,14 @@ Global
 		{AB36077B-DFF9-446A-BDDE-9B2811B5B1C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB36077B-DFF9-446A-BDDE-9B2811B5B1C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB36077B-DFF9-446A-BDDE-9B2811B5B1C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01CEE65F-6C25-40FD-A6D5-A412A853D2A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01CEE65F-6C25-40FD-A6D5-A412A853D2A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01CEE65F-6C25-40FD-A6D5-A412A853D2A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01CEE65F-6C25-40FD-A6D5-A412A853D2A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{626CFCCB-59A5-45B7-9DB4-437358E0F4E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{626CFCCB-59A5-45B7-9DB4-437358E0F4E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{626CFCCB-59A5-45B7-9DB4-437358E0F4E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{626CFCCB-59A5-45B7-9DB4-437358E0F4E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
