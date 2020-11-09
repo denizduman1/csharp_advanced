@@ -17,7 +17,6 @@ namespace FactoryMethodDesignPattern
             Console.ReadLine();
         }
     }
-
     class Factory
     {
         private static Oyun _Object;

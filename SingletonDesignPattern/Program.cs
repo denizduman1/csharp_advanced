@@ -22,6 +22,9 @@ namespace SingletonDesignPattern
             var dataAccesObject = DataAccess.CreateInstance();
             dataAccesObject.Display();
 
+            var exampleObject = Example.CreateSingleton();
+            exampleObject.Display();
+           
         }
     }
 
@@ -78,5 +81,27 @@ namespace SingletonDesignPattern
         {
             Console.WriteLine("DataAcccess!");
         }
+    }
+
+    class Example
+    {
+        private static Example _example;
+        private static object lockObject = new object();
+        private Example(){}
+        public static Example CreateSingleton()
+        {
+            if (_example==null)
+            {
+                lock (lockObject)
+                {
+                    if (_example==null)
+                    {
+                        _example = new Example();
+                    }
+                }               
+            }
+            return _example;
+        }
+        public void Display() {Console.WriteLine("Created!");}
     }
 }
